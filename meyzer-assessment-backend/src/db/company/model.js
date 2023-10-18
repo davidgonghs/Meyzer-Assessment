@@ -13,7 +13,7 @@ var companyTableParams = {
     ],
     AttributeDefinitions: [
         { AttributeName: "country", AttributeType: "S" },
-        { AttributeName: "company_id", AttributeType: "N" },
+        { AttributeName: "company_id", AttributeType: "S" },
     ],
     ProvisionedThroughput: {
         ReadCapacityUnits: 2,

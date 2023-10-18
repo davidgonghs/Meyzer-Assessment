@@ -7,8 +7,14 @@ import docClient from '../client';
 const putCompany = (company: Company) => {
     //create a new instance of the PutCommandInput
     const params: PutCommandInput = {
-        TableName: "companies",
-        Item: {company}
+        TableName: "Companies",
+        Item: {
+            country: company.country,
+            company_id: company.company_id,
+            name: company.name,
+            author: company.author,
+            address: company.address
+        }
     };
 
     const command = new PutCommand(params);

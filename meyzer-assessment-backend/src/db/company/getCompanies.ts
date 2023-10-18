@@ -3,7 +3,7 @@ import docClient from "../client";
 
 const getCompanies = async () => {
     const params: ScanCommandInput = {
-        TableName: "companies"
+        TableName: "Companies"
     };
 
     const command = new ScanCommand(params);

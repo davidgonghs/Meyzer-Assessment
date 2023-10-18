@@ -10,15 +10,5 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  //findCompanysByCountry
-  @Get(':country')
-  findClients(@Param('country') country: string) {
-    return this.appService.findCompanysByCountry(country);
-  }
 
-  // //delete company
-  // @Delete(':id')
-  // deleteCompany(@Param('id') id: string) {
-  //   return this.appService.deleteCompany(id);
-  // }
 }
