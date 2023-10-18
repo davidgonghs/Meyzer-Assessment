@@ -10,4 +10,22 @@ const getCompanies = async () => {
     return await docClient.send(command);
 }
 
-export default getCompanies;
+//get Companies by country
+const getCompaniesByCountry = async (country: string) => {
+    const params: ScanCommandInput = {
+        TableName: "Companies",
+        FilterExpression: "country = :country",
+        ExpressionAttributeValues: {
+            ":country": country
+        }
+    };
+
+    const command = new ScanCommand(params);
+    return await docClient.send(command);
+}
+
+//export all functions
+export default {
+    getAllCompany: getCompanies,
+    getCompanyByCountry: getCompaniesByCountry
+}

@@ -20,7 +20,12 @@ export class CompanyService {
 
     //get all company
     getAllCompany() {
-        return getCompanies();
+        return getCompanies.getAllCompany();
+    }
+
+    //get company by country
+    getCompanyByCountry(country: string) {
+        return getCompanies.getCompanyByCountry(country);
     }
 
 }

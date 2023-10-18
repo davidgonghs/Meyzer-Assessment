@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Post} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import { CompanyService } from './company.service';
 
 @Controller('company')
@@ -23,6 +23,12 @@ export class CompanyController {
   getAllCompany() {
     return this.companyService.getAllCompany();
   }
+
+  //get company by country  /company/:country
+    @Get(':country')
+    getCompanyByCountry(@Param('country') country: string) {
+        return this.companyService.getCompanyByCountry(country);
+    }
 
 
 

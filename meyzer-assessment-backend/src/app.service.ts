@@ -6,8 +6,4 @@ export class AppService {
     return 'Hello World!';
   }
 
-  //findCompanysByCountry
-  findCompanysByCountry(country: string): string {
-    return country;
-  }
 }
