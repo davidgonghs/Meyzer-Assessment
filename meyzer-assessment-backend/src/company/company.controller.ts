@@ -1,14 +1,13 @@
 import { Controller } from '@nestjs/common';
-import { AppService } from "../app.service";
+import { CompanyService } from './company.service';
 
 @Controller('company')
 export class CompanyController {
-  constructor(private readonly companyService: AppService) {}
+  constructor(private readonly companyService: CompanyService) {}
 
   //findCompanysByCountry
   // @Get(':country')
   // findClients(@Param('country') country: string) {
   //   return this.appService.findCompanysByCountry(country);
   // }
-
 }
