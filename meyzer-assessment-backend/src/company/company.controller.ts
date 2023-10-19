@@ -27,6 +27,9 @@ export class CompanyController {
   //get company by country  /company/:country
     @Get(':country')
     getCompanyByCountry(@Param('country') country: string) {
+        if(country === "All"){
+          return this.companyService.getAllCompany();
+        }
         return this.companyService.getCompanyByCountry(country);
     }
 

@@ -7,7 +7,8 @@ const getCompanies = async () => {
     };
 
     const command = new ScanCommand(params);
-    return await docClient.send(command);
+    let data = await docClient.send(command);
+    return data.Items;
 }
 
 //get Companies by country
@@ -21,7 +22,8 @@ const getCompaniesByCountry = async (country: string) => {
     };
 
     const command = new ScanCommand(params);
-    return await docClient.send(command);
+    let data = await docClient.send(command);
+    return data.Items;
 }
 
 //export all functions
