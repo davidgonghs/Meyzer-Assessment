@@ -1,10 +1,10 @@
 //import aws clients and lib from aws-sdk
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb";
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 
 //create a new instance of the DynamoDBClient
 const client = new DynamoDBClient({
-    region: "ap-southeast-1"
+  region: 'ap-southeast-1',
 });
 
 //create a new instance of the DynamoDBDocumentClient

@@ -150,6 +150,7 @@ class Dashboard extends Component {
                                                         <option value="All">All</option>
                                                         <option value="Singapore">Singapore</option>
                                                         <option value="Malaysia">Malaysia</option>
+                                                        <option value="TL">TL</option>
                                                     </select>
                                                 </div>
                                             </div>
